@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="currency-rate-table-creation" author="Kbak">
+        <createTable tableName="rate">
+            <column name="code" type="varchar(3)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="currency" type="varchar(40)"/>
+            <column name="bid" type="decimal(8,5)"/>
+            <column name="ask" type="decimal(8,5)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,32 @@
+server:
+  port: 8081
+
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: test
+    password: test
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydatabase
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: konrad
+    password: secret
+  liquibase:
+    enabled: true
+    change-log: classpath:db/db.changelog-master.xml
+    drop-first: true
+
+#      properties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.MySQLDialect
+
+
+
+rabbit:
+  rate-queue: rate_queue
+
+
+
