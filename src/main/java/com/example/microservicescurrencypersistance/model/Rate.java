@@ -18,7 +18,7 @@ public class Rate {
     private String currency;
     @Id
     private String code;
-    private BigDecimal bid;//sprzedaż
-    private BigDecimal ask;//kupno
+    private BigDecimal bid;
+    private BigDecimal ask;
 
 }
